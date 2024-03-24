@@ -386,12 +386,12 @@ Creating home directory for otus-user.
 ```
 
 >**Рекомендуемые источники**
-> -Статья о LDAP - https://ru.wikipedia.org/wiki/LDAP
-> -Статья о настройке FreeIPA - https://www.dmosk.ru/miniinstruktions.php?mini=freeipa-centos
-> -FreeIPA wiki - https://www.freeipa.org/page/Wiki_TODO
-> -Статья «Chapter 13. Preparing the system for IdM client installation» - https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/installing_identity_management/preparing-the-system-for-ipa-client-installation_installing-identity-management
-> -Статья «про LDAP по-русски» - https://pro-ldap.ru/ 
-> -Статья «54. Настройка времени» - https://basis.gnulinux.pro/ru/latest/basis 54/54._%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8.html
+>- Статья о LDAP - https://ru.wikipedia.org/wiki/LDAP
+>- Статья о настройке FreeIPA - https://www.dmosk.ru/miniinstruktions.php?mini=freeipa-centos
+>- FreeIPA wiki - https://www.freeipa.org/page/Wiki_TODO
+>- Статья «Chapter 13. Preparing the system for IdM client installation» - https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/installing_identity_management/preparing-the-system-for-ipa-client-installation_installing-identity-management
+>- Статья «про LDAP по-русски» - https://pro-ldap.ru/ 
+>- Статья «54. Настройка времени» - https://basis.gnulinux.pro/ru/latest/basis 54/54._%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8.html
 
 
 
