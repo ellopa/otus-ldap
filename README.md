@@ -156,7 +156,7 @@ SELINUXTYPE=targeted
 ::1         localhost localhost.localdomain
 192.168.57.10 ipa.otus.lan ipa
 ```
-$Установим модуль DL1: yum install -y @idm:DL1
+- Установим модуль DL1: yum install -y @idm:DL1
 - Установим FreeIPA-сервер: yum install -y ipa-server
 - yum update nss
 ```
@@ -206,11 +206,11 @@ Chaining:     self-signed
 Проверяем параметры, если всё устраивает, то нажимаем yes
 Continue to configure the system with these values? [no]: yes
 ```
-- Далее начнётся процесс установки. Процесс установки занимает примерно 10-15 минут (иногда время может быть другим). Если мастер успешно выполнит настройку FreeIPA то в конце мы получим сообщение: The ipa-server-install command was successful
+- Начнется процесс установки. Процесс установки занимает примерно 10-15 минут (иногда время может быть другим). Если мастер успешно выполнит настройку FreeIPA то в конце мы получим сообщение: The ipa-server-install command was successful
 
-- **При вводе параметров установки мы вводили 2 пароля:**
-- **Directory Manager password** — это пароль администратора сервера каталогов, У этого пользователя есть полный доступ к каталогу.
-- **IPA admin password** — пароль от пользователя FreeIPA admin
+> При вводе параметров установки мы вводили 2 пароля:
+  - **Directory Manager password** — это пароль администратора сервера каталогов, У этого пользователя есть полный доступ к каталогу.
+  - **IPA admin password** — пароль от пользователя FreeIPA admin
 
 - После успешной установки FreeIPA, проверим, что сервер Kerberos может выдать нам билет: kinit admin
 ```
@@ -226,17 +226,19 @@ Valid starting     Expires            Service principal
 ```
 >- Для удаление полученного билета воспользуемся командой: kdestroy
 
-- Мы можем зайти в Web-интерфейс нашего FreeIPA-сервера, для этого на нашей хостой машине нужно прописать следующую строку в файле Hosts:
+- Проверка через Web-интерфейс FreeIPA сервера - для этого на хостой машине нужно прописать следующую строку в файле Hosts:
+```
 192.168.57.10 ipa.otus.lan
+```
 >- В Unix-based системах файл хост находится по адресу /etc/hosts, в Windows — c:\Windows\System32\Drivers\etc\hosts. Для добавления строки потребуются права администратора.
 
 - После добавления DNS-записи откроем c нашей хост-машины веб-страницу vagranvagra http://ipa.otus.lan
-
 <img src="https://github.com/ellopa/otus-ldap/blob/main/scr_ldap_1.png" width=80% height=80%>
-- Откроется окно управления FreeIPA-сервером. В имени пользователя укажем admin, в пароле укажем наш IPA admin password и нажмём войти. 
 
+- Откроется окно управления FreeIPA-сервером. В имени пользователя укажем admin, в пароле укажем наш IPA admin password и нажмём войти. 
 <img src="https://github.com/ellopa/otus-ldap/blob/main/scr_ldap_2.png" width=80% height=80%>
-- Откроется веб-консоль упрвления FreeIPA. Данные во FreeIPA можно вносить как через веб-консоль, так и средствами коммандной строки.
+
+>- Данные во FreeIPA можно вносить как через веб-консоль, так и средствами коммандной строки.
 
 На этом установка и настройка FreeIPA-сервера завершена.
 
@@ -261,7 +263,7 @@ client2.otus.lan ansible_host=192.168.57.12 ansible_user=vagrant ansible_ssh_pri
 >- client2.otus.lan
 >- Также указаны и ip-адреса, имя пользователя от которого будет логин и ssh-ключ.
 
-- Далее создадим файл [](/provision_1.yml) в котором непосредственно будет выполняться настройка клиентов: 
+- Далее создадим файл [playbook](/provision_1.yml) в котором непосредственно будет выполняться настройка клиентов: 
 
 - Template файла /etc/hosts выглядит следующим образом:
 ```
@@ -361,8 +363,8 @@ logout
 Connection to localhost closed.
 ```
 - Создание  пользователя и проверка - попробуем залогиниться на клиент. Система запросит пароль и попросит ввести новый пароль. 
-scr_ldap_3.png
 
+<img src="https://github.com/ellopa/otus-ldap/blob/main/scr_ldap_3.png" width=80% height=80%>
 ```
 elena_leb@ubuntunbleb:~/LDAP_DZ/ansible$ vagrant ssh ipaclient
 Last login: Sun Mar 24 11:06:17 2024 from 10.0.2.2
