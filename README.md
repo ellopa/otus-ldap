@@ -364,7 +364,8 @@ Connection to localhost closed.
 ```
 - Создание  пользователя и проверка - попробуем залогиниться на клиент. Система запросит пароль и попросит ввести новый пароль. 
 
-<img src="https://github.com/ellopa/otus-ldap/blob/main/scr_ldap_3.png" width=80% height=80%>
+<img src="https://github.com/ellopa/otus-ldap/blob/main/scr_ldap_3.png" width=50% height=50%>
+
 ```
 elena_leb@ubuntunbleb:~/LDAP_DZ/ansible$ vagrant ssh ipaclient
 Last login: Sun Mar 24 11:06:17 2024 from 10.0.2.2
@@ -376,6 +377,7 @@ Enter it again:
 [vagrant@client3 ~]$ kinit otus-user
 Password for otus-user@OTUS.LAN: 
 ```
+
 ```
 [vagrant@client3 ~]$ ssh otus-user@localhost
 Password: 
