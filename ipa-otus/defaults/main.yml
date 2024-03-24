@@ -1,0 +1,7 @@
+ipa_realm: OTUS.LAN
+ipa_domain: otus.lan
+ipa_server_hostname: ipa3.otus.lan
+ipa_client_hostname: client3.otus.lan
+
+ipa_admin_password: lkjH78nm
+ipa_dm_password: lkjH78nm
